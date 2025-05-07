@@ -2,6 +2,8 @@
   "name": "logistics-integration",
   "version": "1.0.0",
   "main": "dist/app.js",
+  "description": "A Node.js application for logistics integration with Shopify and SFTP.",
+  "author": "REGARD BEAUTY IT TEAM",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
