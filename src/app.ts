@@ -5,6 +5,7 @@ import fs from "fs-extra";
 import { config } from "./config";
 import logger from "./utils/logger";
 import orderRoutes from "./api/routes/order.routes";
+import webhookRoutes from "./api/routes/webhook.route";
 import scheduleSendOrdersJob from "./cron/sendOrdersJob";
 import scheduleProcessReportsJob from "./cron/processReportsJob";
 
@@ -31,6 +32,7 @@ const initDirectories = async () => {
 
 // Routes
 app.use("/api/logistics", orderRoutes);
+app.use("/api", webhookRoutes);
 
 // Root route
 app.get("/", (req, res) => {

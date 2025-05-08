@@ -95,7 +95,7 @@ Le service expose plusieurs points d'accès API pour déclencher manuellement de
 - **`POST /api/orders/process-pending`**: Déclenche le traitement des commandes en attente pour toutes les boutiques configurées.
   - Corps de la requête (optionnel) : `{ "storeId": "nom_de_la_boutique" }` pour traiter uniquement les commandes d'une boutique spécifique.
 - **`POST /api/orders/process-shipping-reports`**: Déclenche le traitement des rapports d'expédition CRPCMD téléchargés.
-- **`POST /api/orders/webhook/process-pending`**: Point d'accès webhook pour déclencher le traitement d'une commande spécifique lors de sa création ou mise à jour dans Shopify.
+- **`POST /api/webhook`**: Point d'accès webhook pour déclencher le traitement d'une commande spécifique lors de sa création ou mise à jour dans Shopify.
   - Corps de la requête : Les données de la commande envoyées par Shopify.
 
 **Authentification**: Les points d'accès API sont protégés par un middleware d'authentification. Assurez-vous d'inclure un en-tête `Authorization: Bearer YOUR_API_SECRET` avec la clé secrète configurée dans le fichier `.env`.
