@@ -69,7 +69,7 @@ const startServer = async () => {
 
     // Schedule cron jobs
     // scheduleSendOrdersJob();
-    // scheduleProcessReportsJob();
+    scheduleProcessReportsJob();
 
     logger.info("Application started successfully");
   } catch (error) {
